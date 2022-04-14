@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from '../../common/header/Header';
+// import Header from '../../common/header/Header';
 import './Details.css';
 import ReactStars from "react-rating-stars-component";
 import { useLocation, Link } from 'react-router-dom';
@@ -22,8 +22,6 @@ function Details() {
     return (
 
         <div>
-            <Header headerBtnType="BookNowBtn" buttonName="BOOK SHOW" headerBtnType2="login" buttonName2="LOGIN"  headerBtnType3="logout" buttonName3="LOGOUT" >
-            </Header>
 
             <div className="backBtn">
                 <Link to="/" className="link">

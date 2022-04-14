@@ -1,5 +1,5 @@
-import { React, useState } from "react";
-import Header from "../../common/header/Header";
+import React, { useState } from "react";
+// import Header from "../../common/header/Header";
 import "./Home.css";
 import moviesData from "../../common/moviesData.js";
 import ImageListComponent from "./ImageListComponent";
@@ -7,17 +7,6 @@ import ReleasedMovieList from "./ReleasedMovieList";
 import MovieFilter, { userSelection } from "./MovieFilter";
 import genres from "./genre";
 import artists from "./artists";
-
-// class Home extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             data: moviesData,
-//             genres: genres,
-//             artists: artists,
-//             userSelection: moviesData,
-//         };
-//     }
 
 
 function Home() {
@@ -32,7 +21,7 @@ function Home() {
 
     // -------- Handler Function for filter------//
 
-    filterHandler = () => {
+    var filterHandler = () => {
         if (
             userSelection.name === "" &&
             userSelection.releaseDateStart === "" &&
@@ -79,7 +68,6 @@ function Home() {
     // render() {
     return (
         <div>
-            <Header headerBtnType="loginBtn" buttonName="LOGIN" headerBtnType2="hiddenbtn" buttonName2="hidden" headerBtnType3="logoutbtn" variant="contained" buttonName3="LOGOUT" />
             <div className="upcomingMovieHeadingDiv">
                 <span className="upcomingMovieHeading">Upcoming Movies</span>
             </div>
@@ -99,33 +87,3 @@ function Home() {
 }
 export default Home;
 
-
-// return (
-//     <div>
-//         <Header
-//             headerBtnType="loginbtn"
-//             buttonName="LOGIN"
-//             headerBtnType2="hiddenbtn"
-//             variant="contained"
-//             buttonName2="hidden"
-//             headerBtnType3="logoutbtn"
-//             buttonName3="LOGOUT"
-//         />
-//         <span className="heading">Upcoming movies</span>
-//         <SingleLineImageList moviesData={homeState.data} />
-//         <div className="flex-container">
-//             <div className="homeImages">
-//                 <TitlebarImageList moviesData={movieState} />
-//             </div>
-//             <div className="movieFilter">
-//                 <MovieFilter
-//                     genres={homeState.genres}
-//                     artists={homeState.artists}
-//                     filterHandler={filterHandler}
-//                 />
-//             </div>
-//         </div>
-
-//     </div>
-// );
-// }
