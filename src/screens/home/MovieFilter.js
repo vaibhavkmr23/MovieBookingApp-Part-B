@@ -13,6 +13,7 @@ import Select from '@material-ui/core/Select';
 import Checkbox from '@material-ui/core/Checkbox';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { CardActions } from '@material-ui/core';
 // import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +61,7 @@ export let userSelection = {
 
 export default function MovieFilter(props) {
     const classes = useStyles();
-   
+
     const [personName, setPersonName] = React.useState([]);
 
     const [artistName, setArtistName] = React.useState([]);
@@ -81,7 +82,7 @@ export default function MovieFilter(props) {
 
 
     return (
-        <Card style={{width: '300px'}}  >
+        <Card style={{ width: '300px' }}  >
             <CardContent >
                 <Typography component="div" className={classes.root} style={{ color: "theme.palette.primary.light" }}  >
                     FIND MOVIES BY:
@@ -163,14 +164,16 @@ export default function MovieFilter(props) {
                             }}
                         />
                     </FormControl>
-                    <Button
-                        className={classes.root}
-                        variant="contained"
-                        color="primary"
-                        onClick={props.filterHandler}
-                    >
-                        APPLY
-                    </Button>
+                    <CardActions>
+                        <Button
+                            className={classes.root}
+                            variant="contained"
+                            color="primary"
+                            onClick={props.filterHandler}
+                        >
+                            APPLY
+                        </Button>
+                    </CardActions>
                 </Typography>
             </CardContent>
         </Card>
