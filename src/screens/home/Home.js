@@ -61,7 +61,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Header headerBtnType="loginBtn"  buttonName="LOGIN" headerBtnType2="hiddenbtn" buttonName2="hidden" headerBtnType3="logoutbtn" buttonName3="LOGOUT"/>
+                <Header headerBtnType="loginBtn"  buttonName="LOGIN" headerBtnType2="hiddenbtn" buttonName2="hidden" headerBtnType3="logoutbtn" variant="contained" buttonName3="LOGOUT"/>
                 <div className="upcomingMovieHeadingDiv">
                     <span className="upcomingMovieHeading">Upcoming Movies</span>
                 </div>
